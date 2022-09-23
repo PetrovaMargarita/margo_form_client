@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+:root{
+    --color: #ff6518;
+    --colorFocus: #f6af8e;
+}
+
+
+
+body{
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    width: 100%;
+    padding: 30px;
+    margin-right: auto;
+    max-width: auto;
+}
+
+.card{
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 7px 8px 8px 0px rgb(0 0 0 / 36%);
+    background-color: rgb(251 251 251 / 100%);
+    border: 1px solid rgb(0 0 0 / 0%);
+}
+
+/*стили для логотипа*/
+.img-fluid{
+    width: auto;
+    height: auto;
+}
+
+/*линия между lang*/
+.line{
+    height: 14px;
+    border-left: 1px solid #22262a;
+    left: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    top: 0;
+    color: black;
+}
+.btn-ua, .btn-ru{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/*при наведении на язык, менять цвет*/
+.btn-ua:hover, .btn-ru:hover{
+    color: var(--color);
+}
+.active{
+    font-weight: 500;
+    color: var(--color);
+}
+/*---------------------------------------------------------------------*/
+.curr{
+    background-color: #fbfbfb;
+    text-align: center;
+    color: #626262;
+}
+/*СТИЛИ ДЛЯ ФОРМЫ*/
+.form-control:focus {
+
+    box-shadow: none;
+    background-color: #c8c7c729;
+    border-color: #c8c7c729;;
+}
+.form-control {
+
+    visibility: visible;
+    opacity: 1;
+    background-color: #c8c7c729;
+    border: 1px solid #96969629;
+}
+
+
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    border: 1px solid #79706c9e;
+    border-radius: .25rem;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: scaleX(1.1) scaleY(1.3);
+    transform: scaleX(1.1) scaleY(1.3);
+}
+
+.input100 {
+    display: block;
+    width: 100%;
+    background-color: #f7f7f7;
+    font-size: 15px;
+    color: #484848;
+    line-height: 1.2;
+    padding: 0 26px;
+}
+
+.input100:focus+ .focus-input100 {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.label-input100 {
+
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.2;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    padding-left: 24px;
+    left: 0;
+    top: 30px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.form-floating .label-input100 {
+    padding: 1.2rem 0.75rem;
+}
+.form-select{
+    border: 1px solid #96969629;
+    padding-left: 12px;
+}
+.form-select:focus {
+    border-color: #f7f7f7;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+}
+
+/*---------------------------------------------------------------------*/
+
+
+/*Стили кнопок*/
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+    /*color: #ff6518;*/
+}
+.btn:hover {
+    color: #ff6619;
+}
+
+.btn-success{
+    color: #fff;
+    background-color: var(--color);
+    border-color: var(--color);
+    border-radius: 5px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    height: 55px;
+    font-size: 17px;
+    padding: 0px !important;
+
+}
+.btn-check:focus+.btn-success,
+.btn-success:focus {
+    color: #6f6f6e;
+    background-color: var(--colorFocus);
+    border-color: var(--colorFocus);
+    box-shadow: 0 0 0 0.25rem rgb(60 153 110 / 0%);
+}
+
+.btn-check:active+.btn-success,
+.btn-check:checked+.btn-success,
+.btn-success.active,
+.btn-success:active,
+.show>.btn-success.dropdown-toggle {
+    color: #6f6f6e;
+    background-color: var(--colorFocus);
+    border-color: var(--colorFocus);
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #959697;
+    border-color: #959697;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.btn-check:active+.btn-success:focus,
+.btn-check:checked+.btn-success:focus,
+.btn-success.active:focus, .btn-success:active:focus,
+.show>.btn-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgb(60 153 110 / 0%);
+}
+label.error{
+    color: red;
+    font-size: 13px;
+    position: inherit;
+    padding: 10px 0px 10px 0px;
+    opacity: 1 !important;
+    transform: scale(1.2) translateY(-0.5rem) translateX(0.15rem) !important;
+}
+
+.validation_error input, .validation_error:focus input{
+    border-color: #ff000038 !important;
+    background-color: #fba4a440 !important;
+}
